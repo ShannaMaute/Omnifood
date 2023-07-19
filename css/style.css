@@ -96,8 +96,6 @@
   font-weight: 700;
 }
 
-/* Hero Section Images */
-
 .hero-img {
   /* Percentage of the parent container. */
   width: 100%;
@@ -163,8 +161,6 @@
   font-size: 2rem;
   line-height: 1.8;
 }
-
-/* How It Works Section - Images */
 
 .step-img-box {
   display: flex;
@@ -313,8 +309,6 @@
   width: 3rem;
   color: #e67e22;
 }
-
-/* Meals Section Images */
 
 .meal-img {
   width: 100%;
