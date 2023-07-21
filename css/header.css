@@ -1,0 +1,57 @@
+/***** HEADER *****/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #fdf2e9;
+
+  /* Because we want the header to be sticky, we will set a height. */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
+/***** NAVIGATION *****/
+
+.main-nav-list {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  color: #fff;
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  background-color: #e67e22;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
