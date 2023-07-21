@@ -23,7 +23,7 @@
   - Tint (lighter): #fdf2e9 #fae5d3 #eb984e
   - Shades (darker): #cf711f #45260a
   - Accents:
-  - Greys: #ddd #aaa #333 #555 #6F6F6F #888 
+  - Greys: #ddd #aaa #6F6F6F #767676 #888 #555 #333
 
 -- ICONS (NONE) --
 
@@ -137,7 +137,7 @@ body {
   box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.50);
 }
 
-/* GRID */
+/***** GRID *****/
 
 .grid {
   display: grid;
@@ -159,6 +159,10 @@ body {
 
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .grid--center-v {
