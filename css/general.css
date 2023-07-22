@@ -139,7 +139,9 @@ body {
 
 *:focus {
   outline: none;
-  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.50);
+  padding: 0.5rem;
+  border-radius: 9px;
+  box-shadow: 0 0 0 0.2rem rgba(230, 125, 34, 0.40);
 }
 
 /***** GRID *****/

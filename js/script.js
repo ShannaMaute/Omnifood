@@ -1,23 +1,23 @@
-// Fixing flexbox gap property missing in some Safari versions
+// Sticky Navigation
 
-function checkFlexGap() {
-  var flex = document.createElement('div');
-  flex.style.display = 'flex';
-  flex.style.flexDirection = "column";
-  flex.style.rowGap = '1px';
+const sectionHeroEl = document.querySelector(".section-hero");
 
-  flex.appendChild(document.createElement('div'));
-  flex.appendChild(document.createElement('div'));
+const observer = new IntersectionObserver(function (entries) {
+  const ent = entries[0];
+  if (!ent.isIntersecting) {
+    document.body.classList.add('sticky');
+  }
+  if (ent.isIntersecting)
+    document.body.classList.remove('sticky');
+},
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  });
 
-  document.body.appendChild(flex);
-  var isSupported = flex.scrollHeight === 1;
-  flex.parentNode.removeChild(flex);
-  console.log(isSupported);
 
-  if (!isSupported) document.body.classList.add('no-flexbox-gap');
-}
-
-checkFlexGap();
+observer.observe(sectionHeroEl);
 
 // Smooth Scrolling Animation
 
@@ -45,14 +45,6 @@ allLinks.forEach(function (link) {
   });
 });
 
-// Set Current Year
-
-const yearEl = document.querySelector('.year');
-const currentYear = new Date().getFullYear();
-console.log(currentYear);
-
-yearEl.textContent = currentYear;
-
 // Mobile Navigation - Menu Animation
 
 const btnNavEl = document.querySelector('.btn-mobile-nav');
@@ -61,3 +53,11 @@ const headerEl = document.querySelector('.header');
 btnNavEl.addEventListener('click', function () {
   headerEl.classList.toggle('nav-open');
 });
+
+// Set Current Year
+
+const yearEl = document.querySelector('.year');
+const currentYear = new Date().getFullYear();
+console.log(currentYear);
+
+yearEl.textContent = currentYear;
