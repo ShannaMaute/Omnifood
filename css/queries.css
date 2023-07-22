@@ -208,6 +208,7 @@
 }
 
 /* Below 544px - Phones */
+
 @media (max-width: 34em) {
   .grid {
     row-gap: 4.8rem;
